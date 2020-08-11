@@ -6,9 +6,9 @@ const addNew = () => {
 
 //create 'table' body
 const setTableDiv = () => {
-    const formElement = getFormDivElement();
+    const titleFormElement = getTitleFormDivElement();
     const tableElement = getTableDivElement();
-    formElement.innerHTML = `<h1>Your to do list!</h1>`;
+    titleFormElement.innerHTML = `<h1>Your to do list!</h1>`;
     tableElement.innerHTML = `
         <table>
             <tr>
@@ -27,6 +27,6 @@ const createList = () => {
 
 //Query Selectors
 const getTableDivElement = () => document.querySelector("#table-list");
-const getFormDivElement = () => document.querySelector("#form");
+const getTitleFormDivElement = () => document.querySelector("#title-form");
 const getToDoMessage = () => document.querySelector("#toDo-message").value;
-console.log(getToDoMessage())
+console.log(getToDoMessage());
