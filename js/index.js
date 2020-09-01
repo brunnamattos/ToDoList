@@ -1,13 +1,9 @@
-class List {
-    constructor (message) {
-        this.message = {message};
-    }
-}
+var list = [];
+
 
 const addNew = () => {
     setTableDiv();
-    setTableDiv();
-    addList();
+    setList();
 }
 
 //create 'table' body
@@ -25,13 +21,13 @@ const setTableDiv = () => {
     `
 }
 
-const addList = () => {
-    list = new List(getToDoMessage());
-    console.log(list);
+const setList = () => {
+    var message = getToDoMessage();
+    list.push(message);
 }
-
 
 //Query Selectors
 const getTableDivElement = () => document.querySelector("#table-list");
 const getTitleFormDivElement = () => document.querySelector("#title-form");
+const getToDoInput = () => document.querySelector("#toDo-message");
 const getToDoMessage = () => document.querySelector("#toDo-message").value;
