@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>To do List</title>
 </head>
 
@@ -15,10 +17,11 @@
                 <h1>What are you planning for today?</h1>
             </div>
             <div id="form">
-                <input type="text" id="toDo-message" autofocus>
+                <input type="text" id="toDo-message" data-ls-module="charCounter" maxlength="200" autofocus>
                 <button class="button" type="button" onclick="addNew();">Add</button>
             </div>
-            <div id="table-list">
+            <br>
+            <div id="table-list" class="table-div">
 
             </div>
         </div>

@@ -1,0 +1,6 @@
+.table-div {
+    width: 500px;
+    height: 500px;
+    table-layout:fixed;
+    word-wrap:break-word;
+}
