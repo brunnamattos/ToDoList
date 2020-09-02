@@ -1,13 +1,12 @@
 var list = [];
 
-
 const addNew = () => {
+    setList();
     setTableDiv();
     setTableBody();
-    setList();
 };
 
-//create 'table' body
+//create 'table' content
 const setTableDiv = () => {
     const titleFormElement = getTitleFormDivElement();
     const tableElement = getTableDivElement();
