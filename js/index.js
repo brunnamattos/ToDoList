@@ -50,7 +50,7 @@ const setTableBody = () => {
                 <tr>
                     <td class="table-index">${i+1}</td>
                     <td class="table-message">${list[i]}</td>
-                    <td><a class="edit-icon" onclick="editItem(${i});">&#9999;</a></td>
+                    <td><a class="edit-icon" onclick="editItemInput(${i});">&#9999;</a></td>
                     <td><a class="remove-icon" onclick="removeItem(${i});">&#128465;</a></td>
                 </tr>
             `
@@ -66,8 +66,16 @@ const setList = () => {
     list.push(message);
 };
 
-const editItem = (i) => {
-    list[i] = "I was changed";
+const editItemInput = (i) => {
+    list[i] = `<input type='text' id='toDo-message-edit' data-ls-module='charCounter' maxlength='200' autofocus>
+    <button class='button' type='button' onclick='editItemTable(${i});'>Save</button>`
+    setTableBody();
+}
+
+
+const editItemTable = (i) => {
+    var editMessage = getEditInput();
+    list[i] = editMessage;
     setTableBody();
 }
 
@@ -77,9 +85,11 @@ const removeItem = (i) => {
 }
 
 
+
 //Query Selectors
 const getTableDivElement = () => document.querySelector("#table-list");
 const getTitleFormDivElement = () => document.querySelector("#title-form");
 const getToDoInput = () => document.querySelector("#toDo-message");
 const getToDoMessage = () => document.querySelector("#toDo-message").value;
 const getEditModal = () => document.querySelector("#textEditModal");
+const getEditInput = () => document.querySelector("#toDo-message-edit").value;
