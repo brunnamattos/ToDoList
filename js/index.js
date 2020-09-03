@@ -68,7 +68,7 @@ const setList = () => {
 
 const editItemInput = (i) => {
     list[i] = `<input type='text' id='toDo-message-edit' data-ls-module='charCounter' maxlength='200' autofocus>
-    <button class='button' type='button' onclick='editItemTable(${i});'>Save</button>`
+    <button class='button btn-save' type='button' onclick='editItemTable(${i});'>Save</button>`
     setTableBody();
 }
 
